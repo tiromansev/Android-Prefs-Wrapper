@@ -45,7 +45,7 @@ Step 2. Add the dependency
 
 ```Groovy
 	dependencies {
-	        compile 'com.github.tiromansev:Android-Prefs-Wrapper:0.1.1'
+	        compile 'com.github.tiromansev:Android-Prefs-Wrapper:0.1.2'
 	}
 ```
 
