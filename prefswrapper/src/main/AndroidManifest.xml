@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.tiromansev.prefswrapper">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+
+        <provider
+            android:authorities="com.tiromansev.prefswrapper.prefscontentprovider"
+            android:exported="false"
+            android:enabled="true"
+            android:name=".PrefsContentProvider" />
+    </application>
+
+</manifest>
