@@ -8,7 +8,7 @@ public class AppPrefs {
 
     public static BooleanPreference exampleBoolPref() {
         return BooleanPreference.
-                newBuilder().
+                builder().
                 setKey("example_bool_pref").
                 setDefaultValue(true).
                 build();
