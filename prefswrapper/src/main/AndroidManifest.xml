@@ -8,7 +8,7 @@
         android:supportsRtl="true">
 
         <provider
-            android:authorities="com.tiromansev.prefswrapper.prefscontentprovider"
+            android:authorities="${applicationId}.prefscontentprovider"
             android:exported="false"
             android:enabled="true"
             android:name=".PrefsContentProvider" />
