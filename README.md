@@ -1,6 +1,33 @@
 # Android-Prefs-Wrapper
 Android SharedPreferences wrapper
 
+# How to use
+
+```Java
+public class AppPrefs {
+
+    public static BooleanPreference exampleBoolPref() {
+        return BooleanPreference.
+                newBuilder().
+                setKey("example_bool_pref").
+                setDefaultValue(true).
+                build();
+    }
+
+}
+```
+
+```Java
+public class ExampleActivity extends AppCompatActivity {
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+    	AppPrefs.exampleBoolPref().setValue(true);
+    }
+
+}
+```
+
 # Download
 
 Add it in your root build.gradle at the end of repositories:
