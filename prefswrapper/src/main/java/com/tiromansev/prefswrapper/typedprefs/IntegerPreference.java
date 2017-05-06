@@ -36,7 +36,7 @@ public class IntegerPreference extends BasePreference {
         return new IntegerPreference().new Builder();
     }
 
-    private class Builder {
+    public class Builder {
 
         private Builder() {
 

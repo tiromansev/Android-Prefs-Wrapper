@@ -36,7 +36,7 @@ public class LongPreference extends BasePreference {
         return new LongPreference().new Builder();
     }
 
-    private class Builder {
+    public class Builder {
 
         private Builder() {
 

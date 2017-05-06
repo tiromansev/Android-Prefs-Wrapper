@@ -36,7 +36,7 @@ public class StringPreference extends BasePreference {
         return new StringPreference().new Builder();
     }
 
-    private class Builder {
+    public class Builder {
 
         private Builder() {
 

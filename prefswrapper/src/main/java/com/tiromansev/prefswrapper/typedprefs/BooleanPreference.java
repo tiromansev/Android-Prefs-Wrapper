@@ -36,7 +36,7 @@ public class BooleanPreference extends BasePreference {
         return new BooleanPreference().new Builder();
     }
 
-    private class Builder {
+    public class Builder {
 
         private Builder() {
 
