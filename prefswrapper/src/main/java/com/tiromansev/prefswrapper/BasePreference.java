@@ -141,7 +141,7 @@ public class BasePreference {
         edit.apply();
     }
 
-    protected Object getDefaultValue() {
+    public Object getDefaultValue() {
         return defaultValue;
     }
 
