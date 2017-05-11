@@ -141,8 +141,21 @@ public class BasePreference {
         edit.apply();
     }
 
+    public boolean preferenceExists() {
+        if (fileName != null) {
+            return context.getSharedPreferences(fileName, mode).contains(this.key);
+        }
+        else {
+            return appPreferences.contains(this.key);
+        }
+    }
+
     public Object getDefaultValue() {
         return defaultValue;
+    }
+
+    public boolean valueUndefined() {
+        return true;
     }
 
     protected void setDefaultValue(Object defaultValue) {
