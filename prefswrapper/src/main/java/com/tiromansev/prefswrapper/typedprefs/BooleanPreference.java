@@ -58,6 +58,7 @@ public class BooleanPreference extends BasePreference {
         }
 
         public BooleanPreference build() {
+            checkKey();
             return BooleanPreference.this;
         }
 

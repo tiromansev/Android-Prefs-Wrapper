@@ -31,6 +31,14 @@ public class BasePreference {
         return context.getSharedPreferences(file, mode).getString(name, def_value);
     }
 
+    protected static float getFloatPreference(String name, float def_value) {
+        return appPreferences.getFloat(name, def_value);
+    }
+
+    protected static float getFloatPreference(String file, String name, float def_value) {
+        return context.getSharedPreferences(file, mode).getFloat(name, def_value);
+    }
+
     protected static int getIntPreference(String name, int def_value) {
         return appPreferences.getInt(name, def_value);
     }
@@ -78,6 +86,19 @@ public class BasePreference {
         SharedPreferences prefs = context.getSharedPreferences(file, mode);
         SharedPreferences.Editor edit = prefs.edit();
         edit.putString(key, value);
+        edit.apply();
+    }
+
+    protected static void saveFloatPreference(String key, float value) {
+        SharedPreferences.Editor edit = appPreferences.edit();
+        edit.putFloat(key, value);
+        edit.apply();
+    }
+
+    protected static void saveFloatPreference(String file, String key, float value) {
+        SharedPreferences prefs = context.getSharedPreferences(file, mode);
+        SharedPreferences.Editor edit = prefs.edit();
+        edit.putFloat(key, value);
         edit.apply();
     }
 
@@ -150,6 +171,12 @@ public class BasePreference {
 
     protected String getFileName() {
         return fileName;
+    }
+
+    protected void checkKey() {
+        if (this.key.isEmpty()) {
+            throw new RuntimeException("Empty key value for preference");
+        }
     }
 
     public void clearPreference() {

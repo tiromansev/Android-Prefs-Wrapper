@@ -58,6 +58,7 @@ public class StringPreference extends BasePreference {
         }
 
         public StringPreference build() {
+            checkKey();
             return StringPreference.this;
         }
 

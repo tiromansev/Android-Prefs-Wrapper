@@ -58,6 +58,7 @@ public class LongPreference extends BasePreference {
         }
 
         public LongPreference build() {
+            checkKey();
             return LongPreference.this;
         }
 
