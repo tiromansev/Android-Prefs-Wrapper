@@ -8,7 +8,7 @@ public class AppPrefs {
 
     public static BooleanPreference exampleBoolPref() {
         return BooleanPreference.
-                newBuilder().
+                builder().
                 setKey("example_bool_pref").
                 setDefaultValue(true).
                 build();
@@ -45,7 +45,7 @@ Step 2. Add the dependency
 
 ```Groovy
 	dependencies {
-	        compile 'com.github.tiromansev:Android-Prefs-Wrapper:0.1.2'
+	        compile 'com.github.tiromansev:Android-Prefs-Wrapper:0.1.3'
 	}
 ```
 
@@ -66,6 +66,6 @@ Step 2. Add the dependency
 <dependency>
 	    <groupId>com.github.tiromansev</groupId>
 	    <artifactId>Android-Prefs-Wrapper</artifactId>
-	    <version>0.1.2</version>
+	    <version>0.1.3</version>
 	</dependency>
 ```
