@@ -186,9 +186,12 @@ public class BasePreference {
         return fileName;
     }
 
-    protected void checkKey() {
+    protected void checkPreference() {
         if (this.key.isEmpty()) {
             throw new RuntimeException("Empty key value for preference");
+        }
+        if (this.defaultValue == null) {
+            throw new RuntimeException("Empty default value for preference");
         }
     }
 

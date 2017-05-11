@@ -58,7 +58,7 @@ public class IntegerPreference extends BasePreference {
         }
 
         public IntegerPreference build() {
-            checkKey();
+            checkPreference();
             return IntegerPreference.this;
         }
 

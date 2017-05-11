@@ -58,7 +58,7 @@ public class FloatPreference extends BasePreference {
         }
 
         public FloatPreference build() {
-            checkKey();
+            checkPreference();
             return FloatPreference.this;
         }
 
