@@ -45,7 +45,7 @@ Step 2. Add the dependency
 
 ```Groovy
 	dependencies {
-	        compile 'com.github.tiromansev:Android-Prefs-Wrapper:0.1.8'
+	        compile 'com.github.tiromansev:Android-Prefs-Wrapper:0.2.0'
 	}
 ```
 
@@ -66,6 +66,6 @@ Step 2. Add the dependency
 <dependency>
 	    <groupId>com.github.tiromansev</groupId>
 	    <artifactId>Android-Prefs-Wrapper</artifactId>
-	    <version>0.1.8</version>
+	    <version>0.2.0</version>
 	</dependency>
 ```
