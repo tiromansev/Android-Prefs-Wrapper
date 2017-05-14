@@ -170,7 +170,7 @@ public class BasePreference {
         return true;
     }
 
-    protected String getKey() {
+    public String getKey() {
         return key;
     }
 
