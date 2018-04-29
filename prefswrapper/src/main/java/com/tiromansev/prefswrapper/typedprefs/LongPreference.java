@@ -32,8 +32,14 @@ public class LongPreference extends BasePreference {
         }
     }
 
-    public static Builder builder() {
-        return new LongPreference().new Builder();
+    public static Builder builder(String key) {
+        BasePreference pref = prefsList.get(key);
+        if (pref == null) {
+            pref = new LongPreference();
+            ((LongPreference) pref).setKey(key);
+            prefsList.put(key, pref);
+        }
+        return ((LongPreference) pref).new Builder();
     }
 
     public class Builder {

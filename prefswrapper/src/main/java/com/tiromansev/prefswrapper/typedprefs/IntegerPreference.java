@@ -32,8 +32,14 @@ public class IntegerPreference extends BasePreference {
         }
     }
 
-    public static Builder builder() {
-        return new IntegerPreference().new Builder();
+    public static Builder builder(String key) {
+        BasePreference pref = prefsList.get(key);
+        if (pref == null) {
+            pref = new IntegerPreference();
+            ((IntegerPreference) pref).setKey(key);
+            prefsList.put(key, pref);
+        }
+        return ((IntegerPreference) pref).new Builder();
     }
 
     public class Builder {

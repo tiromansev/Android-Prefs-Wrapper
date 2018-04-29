@@ -32,8 +32,14 @@ public class FloatPreference extends BasePreference {
         }
     }
 
-    public static Builder builder() {
-        return new FloatPreference().new Builder();
+    public static Builder builder(String key) {
+        BasePreference pref = prefsList.get(key);
+        if (pref == null) {
+            pref = new FloatPreference();
+            ((FloatPreference) pref).setKey(key);
+            prefsList.put(key, pref);
+        }
+        return ((FloatPreference) pref).new Builder();
     }
 
     public class Builder {

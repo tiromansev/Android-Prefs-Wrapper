@@ -32,8 +32,14 @@ public class BooleanPreference extends BasePreference {
         }
     }
 
-    public static Builder builder() {
-        return new BooleanPreference().new Builder();
+    public static Builder builder(String key) {
+        BasePreference pref = prefsList.get(key);
+        if (pref == null) {
+            pref = new BooleanPreference();
+            ((BooleanPreference) pref).setKey(key);
+            prefsList.put(key, pref);
+        }
+        return ((BooleanPreference) pref).new Builder();
     }
 
     public class Builder {

@@ -4,10 +4,13 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
+import java.util.HashMap;
+
 public class BasePreference {
 
     private static Context context;
     private static SharedPreferences appPreferences;
+    protected static HashMap<String, BasePreference> prefsList = new HashMap<>();
 
     private String fileName = null;
     private String key = null;

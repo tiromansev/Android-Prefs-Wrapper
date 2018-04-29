@@ -32,8 +32,14 @@ public class StringPreference extends BasePreference {
         }
     }
 
-    public static Builder builder() {
-        return new StringPreference().new Builder();
+    public static Builder builder(String key) {
+        BasePreference pref = prefsList.get(key);
+        if (pref == null) {
+            pref = new StringPreference();
+            ((StringPreference) pref).setKey(key);
+            prefsList.put(key, pref);
+        }
+        return ((StringPreference) pref).new Builder();
     }
 
     public class Builder {
