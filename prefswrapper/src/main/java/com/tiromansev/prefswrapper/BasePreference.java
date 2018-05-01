@@ -16,6 +16,11 @@ public class BasePreference {
     private String key = null;
     private Object defaultValue = null;
     private static int mode = Context.MODE_PRIVATE;
+    private PreferenceValueListener valueListener;
+
+    public void setValueListener(PreferenceValueListener valueListener) {
+        this.valueListener = valueListener;
+    }
 
     public static void setContext(Context context) {
         BasePreference.context = context;
@@ -64,6 +69,12 @@ public class BasePreference {
 
     protected static boolean getBoolPreference(String file, String name, boolean def_value) {
         return context.getSharedPreferences(file, mode).getBoolean(name, def_value);
+    }
+
+    protected void onValueChanged() {
+        if (valueListener != null) {
+            valueListener.onValueChanged();
+        }
     }
 
     protected static void clearPreference(String key) {
@@ -202,6 +213,10 @@ public class BasePreference {
         else {
             clearPreference(key);
         }
+    }
+
+    public interface PreferenceValueListener {
+        void onValueChanged();
     }
 
 }

@@ -30,6 +30,7 @@ public class BooleanPreference extends BasePreference {
         else {
             saveBoolPreference(getKey(), value);
         }
+        onValueChanged();
     }
 
     public static Builder builder(String key) {

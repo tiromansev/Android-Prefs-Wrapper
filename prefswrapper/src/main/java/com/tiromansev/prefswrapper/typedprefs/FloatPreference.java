@@ -30,6 +30,7 @@ public class FloatPreference extends BasePreference {
         else {
             saveFloatPreference(getKey(), value);
         }
+        onValueChanged();
     }
 
     public static Builder builder(String key) {

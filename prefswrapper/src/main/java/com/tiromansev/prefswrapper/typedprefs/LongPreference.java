@@ -30,6 +30,7 @@ public class LongPreference extends BasePreference {
         else {
             saveLongPreference(getKey(), value);
         }
+        onValueChanged();
     }
 
     public static Builder builder(String key) {

@@ -30,6 +30,7 @@ public class IntegerPreference extends BasePreference {
         else {
             saveIntPreference(getKey(), value);
         }
+        onValueChanged();
     }
 
     public static Builder builder(String key) {
