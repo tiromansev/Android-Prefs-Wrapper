@@ -49,6 +49,11 @@ public class BooleanPreference extends BasePreference {
 
         }
 
+        public Builder setTitle(String title) {
+            BooleanPreference.this.setTitle(title);
+            return this;
+        }
+
         public Builder setKey(String key) {
             BooleanPreference.this.setKey(key);
             return this;

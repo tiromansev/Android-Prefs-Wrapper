@@ -6,8 +6,7 @@ public class AppPrefs {
 
     public static StringPreference userName() {
         return StringPreference
-                .builder()
-                .setKey("user_name")
+                .builder("user_name")
                 .setDefaultValue("default value")
                 .build();
     }

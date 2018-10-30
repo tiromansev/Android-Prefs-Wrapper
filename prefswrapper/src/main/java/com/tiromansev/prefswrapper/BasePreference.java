@@ -17,9 +17,18 @@ public class BasePreference {
     private Object defaultValue = null;
     private static int mode = Context.MODE_PRIVATE;
     private PreferenceValueListener valueListener;
+    private String title;
 
     public void setValueListener(PreferenceValueListener valueListener) {
         this.valueListener = valueListener;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public static void setContext(Context context) {

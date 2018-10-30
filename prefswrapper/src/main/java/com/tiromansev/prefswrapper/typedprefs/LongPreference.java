@@ -49,6 +49,11 @@ public class LongPreference extends BasePreference {
 
         }
 
+        public Builder setTitle(String title) {
+            LongPreference.this.setTitle(title);
+            return this;
+        }
+
         public Builder setKey(String key) {
             LongPreference.this.setKey(key);
             return this;

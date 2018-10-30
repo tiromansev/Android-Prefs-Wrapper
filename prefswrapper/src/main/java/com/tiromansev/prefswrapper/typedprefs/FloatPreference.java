@@ -49,6 +49,11 @@ public class FloatPreference extends BasePreference {
 
         }
 
+        public Builder setTitle(String title) {
+            FloatPreference.this.setTitle(title);
+            return this;
+        }
+
         public Builder setKey(String key) {
             FloatPreference.this.setKey(key);
             return this;

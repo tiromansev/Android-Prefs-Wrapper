@@ -49,6 +49,11 @@ public class IntegerPreference extends BasePreference {
 
         }
 
+        public Builder setTitle(String title) {
+            IntegerPreference.this.setTitle(title);
+            return this;
+        }
+
         public Builder setKey(String key) {
             IntegerPreference.this.setKey(key);
             return this;
